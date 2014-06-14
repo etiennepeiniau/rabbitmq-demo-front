@@ -1,3 +1,26 @@
-<div class="row">
-  <h4>Users</h4>
+<div class="server row">
+  <div class="alert alert-warning" ng-show="error">{{ error }}</div>
+  <div class="alert alert-success" ng-hide="error">Server is up</div>
+</div>
+<div class="users row" ng-show="users">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Vendor</th>
+          <th>Platform</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users">
+          <td>{{ user.name }}</td>
+          <td>{{ user.vendor }}</td>
+          <td>{{ user.platform }}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
