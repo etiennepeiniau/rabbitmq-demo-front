@@ -1,5 +1,9 @@
+# dependecies
 node_modules
+bower_components
+# build
 dist
 .tmp
 .sass-cache
-bower_components
+# ide
+*.iml
