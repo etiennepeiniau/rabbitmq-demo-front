@@ -16,10 +16,22 @@ body {
   padding-bottom: 19px;
 }
 
-/* Everything gets side spacing for mobile first views */
-.main {
-    padding-left: 15px;
-    padding-right: 15px;
+.control {
+    margin-bottom: 20px;
+}
+
+.control-title {
+    padding: 8px;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+}
+
+.control-color {
+    padding: 8px 0px;
+}
+
+.control-routing-key {
+    padding: 8px 0px;
 }
 
 .color-swatch {
