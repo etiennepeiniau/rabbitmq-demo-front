@@ -9,10 +9,10 @@
  */
 angular.module('rabbitmqDemoFrontApp')
   .controller('MainCtrl', function ($scope, $http, $timeout, control) {
-    // attach sendColorToAll and sendClearToAll control to users
+    // attach sendColorToAll and sendClearToAll control to scope
     $scope.sendColorToAll = control.sendColorToAll;
     $scope.sendClearToAll = control.sendClearToAll;
-    // attach sendColorToSome and sendClearToSome control to users
+    // attach sendColorToSome and sendClearToSome control to scope
     $scope.routingKey = '';
     $scope.setRoutingKey = function(value) {
       $scope.routingKey = value;
