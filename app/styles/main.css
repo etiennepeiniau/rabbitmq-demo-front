@@ -4,12 +4,6 @@ body {
   padding-bottom: 20px;
 }
 
-/* Everything gets side spacing for mobile first views */
-.main {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
@@ -20,6 +14,54 @@ body {
   margin-bottom: 0;
   line-height: 40px;
   padding-bottom: 19px;
+}
+
+/* Everything gets side spacing for mobile first views */
+.main {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.color-swatch {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 0 7px;
+    border-radius: 3px;
+}
+
+.color-swatch:hover {
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+}
+
+.color-swatches .blue{
+    background-color: #428bca;
+}
+
+.color-swatches .green{
+    background-color: #5cb85c;
+}
+
+.color-swatches .light-blue{
+    background-color: #5bc0de;
+}
+
+.color-swatches .orange{
+    background-color: #f0ad4e;
+}
+
+.color-swatches .red{
+    background-color: #d9534f;
+}
+
+.color-swatch-clear {
+    float: left;
+    margin: 0 7px;
+}
+
+.color-swatch-clear:hover {
+    cursor: pointer;
 }
 
 /* Custom page footer */

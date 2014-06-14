@@ -4,23 +4,32 @@
 </div>
 <div class="users row" ng-show="users">
   <div class="col-md-12">
-    <table class="table table-hover">
+    <table class="table">
       <thead>
         <tr>
           <th>Name</th>
           <th>Vendor</th>
           <th>Platform</th>
-          <th>Keys</th>
+          <th>Binding keys</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="user in users">
+        <tr ng-repeat="user in users | orderBy:name">
           <td>{{ user.name }}</td>
           <td>{{ user.vendor }}</td>
           <td>{{ user.platform }}</td>
           <td>{{ user.bindingKeys }}</td>
-          <td></td>
+          <td>
+            <div class="color-swatches">
+              <div class="color-swatch blue" ng-click="user.sendColor('#428bca')"></div>
+              <div class="color-swatch green" ng-click="user.sendColor('#5cb85c')"></div>
+              <div class="color-swatch light-blue" ng-click="user.sendColor('#5bc0de')"></div>
+              <div class="color-swatch orange" ng-click="user.sendColor('#f0ad4e')"></div>
+              <div class="color-swatch red" ng-click="user.sendColor('#d9534f')"></div>
+              <a class="color-swatch-clear" ng-click="user.clear()">Clear</a>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
