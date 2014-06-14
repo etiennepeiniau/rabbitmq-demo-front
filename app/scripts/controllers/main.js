@@ -1,4 +1,3 @@
-/*global $ */
 'use strict';
 
 /**
@@ -9,31 +8,25 @@
  * Controller of the rabbitmqDemoFrontApp
  */
 angular.module('rabbitmqDemoFrontApp')
-  .controller('MainCtrl', function ($scope, $http, $timeout) {
+  .controller('MainCtrl', function ($scope, $http, $timeout, control) {
+    // attach sendColorToAll and sendClearToOne control to users
+    $scope.sendColorToAll = control.sendColorToAll;
+    $scope.sendClearToAll = control.sendClearToAll;
+    // retrieve the users by polling the server
     var httpPolling = function () {
       $timeout(function () {
         $http({method: 'GET', url: 'http://localhost:8080/rabbitmq/users'}).
           success(function (users) {
+            // attach sendColorToOne and sendClearToOne control to users
             users.forEach(function(user) {
               user.sendColor = function(color) {
-                var data = { userName: user.name, color: color };
-                $http({
-                  method: 'POST',
-                  url: 'http://localhost:8080/rabbitmq/users/color/one',
-                  data    : $.param(data),
-                  headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-                });
+                control.sendColorToOne(user.name, color);
               };
               user.clear = function() {
-                var data = { userName: user.name };
-                $http({
-                  method: 'POST',
-                  url: 'http://localhost:8080/rabbitmq/users/clear/one',
-                  data    : $.param(data),
-                  headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-                });
-              }
+                control.sendClearToOne(user.name);
+              };
             });
+            $scope.error = undefined;
             $scope.users = users;
           }).
           error(function () {

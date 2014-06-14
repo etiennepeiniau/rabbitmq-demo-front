@@ -1,7 +1,35 @@
+<!-- Server status -->
 <div class="server row">
   <div class="alert alert-warning" ng-show="error">{{ error }}</div>
   <div class="alert alert-success" ng-hide="error">Server is up</div>
 </div>
+<!-- Global controls -->
+<div class="control row">
+  <div class="col-md-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Send to all</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="color-swatches">
+              <div class="color-swatch blue" ng-click="sendColorToAll('#428bca')"></div>
+              <div class="color-swatch green" ng-click="sendColorToAll('#5cb85c')"></div>
+              <div class="color-swatch light-blue" ng-click="sendColorToAll('#5bc0de')"></div>
+              <div class="color-swatch orange" ng-click="sendColorToAll('#f0ad4e')"></div>
+              <div class="color-swatch red" ng-click="sendColorToAll('#d9534f')"></div>
+              <a class="color-swatch-clear" ng-click="sendClearToAll()">Clear</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- Users -->
 <div class="users row" ng-show="users">
   <div class="col-md-12">
     <table class="table">
