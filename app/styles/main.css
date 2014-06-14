@@ -67,12 +67,12 @@ body {
     background-color: #d9534f;
 }
 
-.color-swatch-clear {
+.color-swatch-link {
     float: left;
     margin: 0 7px;
 }
 
-.color-swatch-clear:hover {
+.color-swatch-link:hover {
     cursor: pointer;
 }
 

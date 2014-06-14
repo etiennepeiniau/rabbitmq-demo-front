@@ -8,7 +8,7 @@
  * Controller of the rabbitmqDemoFrontApp
  */
 angular.module('rabbitmqDemoFrontApp')
-  .controller('MainCtrl', function ($scope, $http, $timeout, control) {
+  .controller('MainCtrl', function ($scope, $http, $timeout, control, pixels) {
     // attach sendColorToAll and sendClearToAll control to scope
     $scope.sendColorToAll = control.sendColorToAll;
     $scope.sendClearToAll = control.sendClearToAll;
@@ -44,4 +44,6 @@ angular.module('rabbitmqDemoFrontApp')
       }, 2000);
     };
     httpPolling();
+    // specials
+    $scope.invade = pixels.invade;
   });

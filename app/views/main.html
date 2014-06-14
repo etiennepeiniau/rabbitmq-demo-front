@@ -22,7 +22,8 @@
             <div class="color-swatch light-blue" ng-click="sendColorToAll('#5bc0de')"></div>
             <div class="color-swatch orange" ng-click="sendColorToAll('#f0ad4e')"></div>
             <div class="color-swatch red" ng-click="sendColorToAll('#d9534f')"></div>
-            <a class="color-swatch-clear" ng-click="sendClearToAll()">Clear</a>
+            <a class="color-swatch-link" ng-click="sendClearToAll()">Clear</a>
+            <a class="color-swatch-link" ng-click="invade()">Invade</a>
           </div>
         </div>
       </div>
@@ -51,7 +52,7 @@
             <div class="color-swatch light-blue" ng-click="sendColorToSome(routingKey, '#5bc0de')"></div>
             <div class="color-swatch orange" ng-click="sendColorToSome(routingKey, '#f0ad4e')"></div>
             <div class="color-swatch red" ng-click="sendColorToSome(routingKey, '#d9534f')"></div>
-            <a class="color-swatch-clear" ng-click="sendClearToSome(routingKey)">Clear</a>
+            <a class="color-swatch-link" ng-click="sendClearToSome(routingKey)">Clear</a>
           </div>
         </div>
       </div>
@@ -88,7 +89,7 @@
               <div class="color-swatch light-blue" ng-click="user.sendColor('#5bc0de')"></div>
               <div class="color-swatch orange" ng-click="user.sendColor('#f0ad4e')"></div>
               <div class="color-swatch red" ng-click="user.sendColor('#d9534f')"></div>
-              <a class="color-swatch-clear" ng-click="user.clear()">Clear</a>
+              <a class="color-swatch-link" ng-click="user.clear()">Clear</a>
             </div>
           </td>
         </tr>
